@@ -1,7 +1,4 @@
-const properties = require('./json/properties.json');
-const users = require('./json/users.json');
 const { Pool } = require('pg');
-const bcrypt = require('bcrypt');
 
 const pool = new Pool({
   user: 'vagrant',
@@ -9,7 +6,9 @@ const pool = new Pool({
   host: 'localhost',
   database: 'lightbnb'
 });
-
+const bcrypt = require('bcrypt');
+const properties = require('../json/properties.json');
+const users = require('../json/users.json');
 /// Users
 
 /**
